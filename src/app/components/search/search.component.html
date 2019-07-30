@@ -1,0 +1,68 @@
+<div class="container">
+  <form [formGroup]="searchInfoForm" *ngIf="busLoad">
+    <div class="row">
+      <div class="col col-tablet-4">
+        <mat-form-field class="example-full-width">
+          <mat-icon matPrefix svgIcon="city"></mat-icon>
+          <input
+            type="text"
+            placeholder="From"
+            aria-label="From location"
+            formControlName="from"
+            matInput
+            [matAutocomplete]="fromAutoComplete"
+          />
+          <mat-autocomplete #fromAutoComplete="matAutocomplete">
+            <mat-option *ngFor="let list of busList.Locations" [value]="list">
+              {{ list }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      <!-- <p *ngIf="busLoad">Test {{ busList.Locations[0] }}</p> -->
+      <div class="col col-tablet-4">
+        <mat-form-field class="example-full-width">
+          <mat-icon matPrefix svgIcon="city"></mat-icon>
+          <input
+            type="text"
+            placeholder="To"
+            formControlName="to"
+            aria-label="To Location"
+            matInput
+            [matAutocomplete]="toAutoComplete"
+          />
+          <mat-autocomplete #toAutoComplete="matAutocomplete">
+            <mat-option *ngFor="let list of busList.Locations" [value]="list">
+              {{ list }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      <div class="col col-tablet-4">
+        <mat-form-field>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            formControlName="date"
+            placeholder="Choose a date"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <button
+        type="button"
+        mat-flat-button
+        color="primary"
+        (click)="SearchBus()"
+      >
+        Search
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,100 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+
+/* CSS DIRECTORY
+	=FONT STACKS
+	=COLORS, GRAYS, GRADIENTS
+	=ELEMENTS
+	=BOOTSTRAP GRID VARS AND SETTINGS
+
+/* ===FONT STACKS=== */
+$font-opensans: "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+
+/* ===COLORS=== */
+$color-primary: #6f3987;
+$color-primary-hover: #673887;
+$primary-color: #270433;
+$primary-mid: #885593;
+$primary-light: #6f3987;
+$primary-dark: #673887;
+$primary-hover: #f0d3f9;
+$secondary-color: #da3e7b;
+$secondary-mid: #c82e81;
+$secondary-light: #ff7cae;
+$secondary-hovere: #f86d88;
+$mid-color: #fb9d80;
+$mid-light: #ffa8a8;
+$color-accent: #467f20;
+$color-accent-hover: #5c9f2d;
+$color-secondary: #41173f;
+$color-secondary-hover: #650360;
+$color-error: #de200d;
+$color-error-hover: #fef8f9;
+$gray: #767070;
+$gray-hover: #717171;
+$gray-mid: #8e8e8e;
+$gray-mid-light: #b8b8b8;
+$gray-light: #dcdcdc;
+$gray-dark: #333333;
+$gray-disabled: #dcdcdc;
+$white: #ffffff;
+$white-hover: #f6f6f6;
+$off-white: #fbfbfb;
+$black: #000000;
+$color-outline-focus: #4d90fe;
+$color-warning: #e26d08;
+$color-warning-hover: #e16800;
+$gradient-primary: linear-gradient(to right, #885593, #8390b6);
+$gradient-accent: linear-gradient(#77bc1f, #467f20);
+$gradient-secondary: linear-gradient(#650360, #41173f);
+$gradient-secondary-color: linear-gradient(to right, #f66a7d, #ff78b4);
+$gradient-mid: linear-gradient(to right, #fb8e7f, #fed086);
+$gradient-gray: linear-gradient(#a2a2a2, #767070);
+
+$color-indigo: #270433;
+$color-green: #467f20;
+$color-purple: #41173f;
+$color-indigo-dark: #673887;
+
+/* ===ELEMENTS=== */
+$border-standard: 1px solid $gray-light;
+
+/* ===BOOTSTRAP GRID SETTINGS=== */
+// Grid breakpoints
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+  tiny: 0,
+  phone: 400px,
+  tablet: 600px,
+  tabletL: 900px,
+  laptopS: 1100px,
+  laptop: 1200px,
+  desktop: 1800px
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+// Grid containers
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  phone: 380px,
+  tablet: 564px,
+  tabletL: 852px,
+  laptop: 1140px
+) !default;
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+$enable-grid-classes: true;
+
+//Spaces
+$sapcers: (
+  "small": calc(1 *#{var(--spacer-base)}),
+  "medium": calc(3 *#{var(--spacer-base)}),
+  "large": calc(5 *#{var(--spacer-base)}),
+  "x-large": calc(8 *#{var(--spacer-base)})
+) !default;
+
+// Utilities
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex,
+  inline-flex !default;

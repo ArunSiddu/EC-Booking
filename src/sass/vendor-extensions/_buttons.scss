@@ -1,0 +1,63 @@
+html {
+  .mat-button,
+  .mat-flat-button,
+  .mat-raised-button,
+  .mat-stroked-button,
+  button {
+    &.wide {
+      min-width: 253px;
+    }
+
+    @include media-breakpoint-down(phone) {
+      width: 100%;
+    }
+  }
+
+  a {
+    &.mat-button,
+    &.mat-flat-button,
+    &.mat-raised-button,
+    &.mat-stroked-button {
+      text-decoration: none;
+    }
+  }
+
+  .mat-button {
+    min-width: 0;
+    padding: 0;
+    font-weight: 300;
+    .mat-button-ripple,
+    .mat-button-focus-overlay {
+      display: none;
+    }
+    &:hover {
+      background: none;
+      text-decoration: underline;
+    }
+    &:focus {
+      outline: 2px solid $color-outline-focus;
+      outline-offset: -2px;
+    }
+  }
+
+  .mat-button,
+  .mat-flat-button,
+  .mat-raised-button,
+  .mat-stroked-button {
+    padding: 8px 30px;
+    min-width: 123px;
+  }
+
+  .mat-white {
+    &:hover {
+      background: $white-hover;
+    }
+    span {
+      color: $color-primary;
+    }
+  }
+
+  .mat-icon-button .mat-button-focus-overlay {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../../sass/abstracts/variables";
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 530;
+  //   background: linear-gradient(135deg, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to right, #673887, #943985, #de5d74);
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  .logo {
+    display: inline-block;
+    .mat-icon {
+      width: 75px;
+      height: 50px;
+      fill: $primary-hover;
+    }
+  }
+  .left {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .right {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+::ng-deep {
+  .login {
+    .mat-icon {
+      path {
+        fill: $white;
+      }
+    }
+  }
+}

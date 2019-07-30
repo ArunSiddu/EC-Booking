@@ -1,0 +1,16 @@
+//Force color fill on color=primary for svgs that weren't made with flexible fill colors
+.mat-icon-button.mat-primary,
+.mat-icon.mat-primary {
+  svg path {
+    fill: $color-primary;
+  }
+}
+.mat-form-field {
+  span[mat-icon-button] {
+    .mat-icon {
+      path {
+        fill: $color-primary;
+      }
+    }
+  }
+}

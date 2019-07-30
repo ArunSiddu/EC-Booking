@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/* ==Order==
+abstracts/
+vendors/
+vendors-extensions/
+base/
+elements/
+pages/
+themes/
+*/
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700");
+
+//@import "abstracts/variables";
+
+@import "node_modules/bootstrap/scss/mixins/breakpoints";
+@import "node_modules/bootstrap/scss/mixins/grid-framework";
+@import "node_modules/bootstrap/scss/mixins/grid";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/utilities/display";
+
+@import "vendors-extensions/bootstrap_grid_and_containers";
+@import "vendors-extensions/material-extensions/accordions";
+@import "vendors-extensions/material-extensions/buttons";
+@import "vendors-extensions/material-extensions/forms";
+@import "vendors-extensions/material-extensions/icons";
+@import "vendors-extensions/material-extensions/modals";
+@import "vendors-extensions/material-extensions/toggles";
+@import "vendors-extensions/ngx-tooltip";
+
+@import "mixins/all";
+@import "base/defaults";
+@import "base/typography";
+
+@import "elements/all";
+
+@import "pages/applicant-steps";
+
+@import "common.blocks/all";
+
+@import "utilities/accessibility";
+@import "utilities/margins-and-padding";
+@import "utilities/mobile-responsive";
+@import "utilities/show-hide";
+@import "utilities/text";
